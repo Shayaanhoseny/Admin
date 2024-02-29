@@ -1,0 +1,54 @@
+local Player = game.Players.LocalPlayer
+
+Player.Chatted:Connect(function(cht)
+    if cht:match(";fly") then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TOGZ819/scripting/main/local_FlyGui__Instance.newScreenG.txt", true))()
+    end
+end)
+
+local Player = game.Players.LocalPlayer
+
+Player.Chatted:Connect(function(cht)
+    if cht:match(";bloxfruitsnokey") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+    end
+end)
+
+local Player = game.Players.LocalPlayer
+
+Player.Chatted:Connect(function(cht)
+    if cht:match(";tsb") then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Scripterbacon/TSBobfuscator/main/Script.Lua"))()
+    end
+  end)
+
+Player.Chatted:Connect(function(cht)
+    if cht:match("Buildaboat") then    loadstring(game:HttpGet("https://raw.githubusercontent.com/Deni210/main/main/RubyHub.lua", true))()
+    end
+  end)
+
+Player.Chatted:Connect(function(cht)
+    if cht:match("slapbattles") then    
+local Namecall
+Namecall = hookmetamethod(game, '__namecall', function(self, ...)
+   if getnamecallmethod() == 'FireServer' and tostring(self) == 'Ban' then
+       return
+   elseif getnamecallmethod() == 'FireServer' and tostring(self) == 'WalkSpeedChanged' then
+       return
+   elseif getnamecallmethod() == 'FireServer' and tostring(self) == 'AdminGUI' then
+       return
+   end
+   return Namecall(self, ...)
+end)
+
+-- Main
+local LocalPlayer = game.Players.LocalPlayer
+local ReplicatedStorage = game:GetService('ReplicatedStorage')
+
+game.RunService.RenderStepped:Connect(function()
+   for Index, Player in next, game.Players:GetPlayers() do
+       if Player ~= LocalPlayer then
+           local Character = Player.Character
+           
+           if Character:FindFirstChild('HumanoidRootPart') ~= nil and Character:FindFirstChild('Humanoid') ~= nil and Character.Humanoid.Health > 0 then
+               local Magnitude = (Character.HumanoidRootPart.Position - LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
